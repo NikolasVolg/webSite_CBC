@@ -1,0 +1,60 @@
+#sidebarMenu {
+    position: fixed;
+    right: 0;
+    width: 250px;
+    margin-top: 335px;
+    transform: translateX(250px);
+    transition: all .5s ease-in-out;
+    background: rgb(99, 98, 98);
+}
+
+.sidebarMenuInner {
+    margin: 0;
+    padding: 0;
+}
+
+.sidebarMenuInner li {
+    list-style: none;
+    color: #fff;
+    background-color: rgb(99, 98, 98);
+    text-transform: uppercase;
+    font-family: 'Karla';
+    padding: 20px;
+    cursor: pointer;
+    transform: translateX(0);
+    transition: transform .5s ease-in-out;
+    position: relative;
+}
+
+.sidebarMenuInner li::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: rgb(143, 143, 143);
+    width: 350px;
+    height: 1px;
+}
+
+.sidebarMenuInner li:hover {
+    transform: translateX(-15px);
+}
+
+.sidebarMenuInner li span {
+    display: block;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.50);
+}
+
+.sidebarMenuInner li a {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+input[type="checkbox"]:checked~#sidebarMenu {
+    transform: translateX(0);
+}
