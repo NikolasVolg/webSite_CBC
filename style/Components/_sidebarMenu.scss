@@ -5,7 +5,7 @@
     margin-top: 335px;
     transform: translateX(250px);
     transition: all .5s ease-in-out;
-    background: rgb(99, 98, 98);
+    background: $sidebarMenuBGD;
 }
 
 .sidebarMenuInner {
@@ -15,8 +15,7 @@
 
 .sidebarMenuInner li {
     list-style: none;
-    color: #fff;
-    background-color: rgb(99, 98, 98);
+    background-color: $sidebarMenuBGD;
     text-transform: uppercase;
     font-family: 'Karla';
     padding: 20px;
@@ -32,23 +31,18 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    background-color: rgb(143, 143, 143);
+    background-color: $sidebarMenuLINE;
     width: 350px;
     height: 1px;
+    z-index: 5;
 }
 
 .sidebarMenuInner li:hover {
     transform: translateX(-15px);
 }
 
-.sidebarMenuInner li span {
-    display: block;
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.50);
-}
-
 .sidebarMenuInner li a {
-    color: #fff;
+    color: $sidebarMenuTEXT;
     text-transform: uppercase;
     font-weight: bold;
     cursor: pointer;

@@ -18,14 +18,22 @@ html {
   font-family: "Karla";
   src: url("../../fonts/Karla/Karla-VariableFont_wght.ttf");
 }
+/* Color Menu sidebar Toggle */
+/* Homepage Title */
+/* Homepage Title:Hover */
 nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100px;
+  height: 50px;
   position: fixed;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.6);
+}
+@media screen and (min-width: 768px) {
+  nav {
+    height: 100px;
+  }
 }
 
 .Accueil {
@@ -40,12 +48,17 @@ nav {
 
 .Qui p,
 .Realisations p {
-  width: 500px;
+  max-width: 500px;
 }
 
 header img {
-  height: 90px;
+  height: 45px;
   padding-left: 15px;
+}
+@media screen and (min-width: 768px) {
+  header img {
+    height: 70px;
+  }
 }
 
 input[type=checkbox] {
@@ -55,17 +68,23 @@ input[type=checkbox] {
 }
 
 .sidebarIconToggle {
-  width: 42px;
-  height: 24px;
+  width: 30px;
+  height: 18px;
   cursor: pointer;
   position: relative;
   transition: all 0.5s ease-in-out;
   margin-right: 15px;
 }
+@media screen and (min-width: 768px) {
+  .sidebarIconToggle {
+    width: 42px;
+    height: 24px;
+  }
+}
 
 .sidebarIconToggle span {
   width: 100%;
-  height: 4px;
+  height: 3px;
   border-radius: 2px;
   background: #000;
   display: block;
@@ -73,25 +92,46 @@ input[type=checkbox] {
   top: 50%;
   transition: all 0.5s ease-in-out;
 }
+@media screen and (min-width: 768px) {
+  .sidebarIconToggle span {
+    height: 4px;
+  }
+}
 
 .sidebarIconToggle span::before,
 .sidebarIconToggle span::after {
   content: "";
   position: absolute;
   width: 100%;
-  height: 4px;
+  height: 3px;
   display: block;
   background: #000;
   border-radius: 5px;
   transition: all 0.5s ease-in-out;
 }
+@media screen and (min-width: 768px) {
+  .sidebarIconToggle span::before,
+.sidebarIconToggle span::after {
+    height: 4px;
+  }
+}
 
 .sidebarIconToggle span::before {
-  transform: translateY(-10px);
+  transform: translateY(-8px);
+}
+@media screen and (min-width: 768px) {
+  .sidebarIconToggle span::before {
+    transform: translateY(-10px);
+  }
 }
 
 .sidebarIconToggle span::after {
-  transform: translateY(10px);
+  transform: translateY(8px);
+}
+@media screen and (min-width: 768px) {
+  .sidebarIconToggle span::after {
+    transform: translateY(10px);
+  }
 }
 
 /*ANIMATION*/
@@ -126,7 +166,6 @@ input[type=checkbox]:checked ~ .sidebarIconToggle span::after {
 
 .sidebarMenuInner li {
   list-style: none;
-  color: #fff;
   background-color: #636262;
   text-transform: uppercase;
   font-family: "Karla";
@@ -146,16 +185,11 @@ input[type=checkbox]:checked ~ .sidebarIconToggle span::after {
   background-color: #8f8f8f;
   width: 350px;
   height: 1px;
+  z-index: 5;
 }
 
 .sidebarMenuInner li:hover {
   transform: translateX(-15px);
-}
-
-.sidebarMenuInner li span {
-  display: block;
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.5);
 }
 
 .sidebarMenuInner li a {
@@ -170,85 +204,84 @@ input[type=checkbox]:checked ~ #sidebarMenu {
   transform: translateX(0);
 }
 
-h1 {
+@keyframes showTopText {
+  0% {
+    transform: translate3d(0, 100%, 0);
+  }
+  40%, 50% {
+    transform: translate3d(0, 50%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes showBottomText {
+  0% {
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animated-title {
+  color: #222;
   font-family: "Karla";
-  font-size: 6rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  -webkit-animation: focus-in-contract-bck 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: focus-in-contract-bck 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  height: 90vmin;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vmin;
 }
 
-h1:hover {
-  -webkit-animation: blur-out-expand-fwd 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: blur-out-expand-fwd 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+.animated-title > div {
+  height: 50%;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
 }
 
-@-webkit-keyframes focus-in-contract-bck {
-  0% {
-    letter-spacing: 1em;
-    -webkit-transform: translateZ(300px);
-    transform: translateZ(300px);
-    -webkit-filter: blur(12px);
-    filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateZ(12px);
-    transform: translateZ(12px);
-    -webkit-filter: blur(0);
-    filter: blur(0);
-    opacity: 1;
-  }
+.animated-title > div div {
+  font-size: 12vmin;
+  padding: 2vmin 0;
+  position: absolute;
 }
-@keyframes focus-in-contract-bck {
-  0% {
-    letter-spacing: 1em;
-    -webkit-transform: translateZ(300px);
-    transform: translateZ(300px);
-    -webkit-filter: blur(12px);
-    filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateZ(12px);
-    transform: translateZ(12px);
-    -webkit-filter: blur(0);
-    filter: blur(0);
-    opacity: 1;
-  }
+
+.animated-title > div div span {
+  display: block;
 }
-@-webkit-keyframes blur-out-expand-fwd {
-  0% {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    -webkit-filter: blur(0.01);
-    filter: blur(0.01);
-  }
-  100% {
-    letter-spacing: 1em;
-    -webkit-transform: translateZ(300px);
-    transform: translateZ(300px);
-    -webkit-filter: blur(12px) opacity(0%);
-    filter: blur(12px) opacity(0%);
-  }
+
+.animated-title > div.text-top {
+  border-bottom: 1vmin solid #000;
+  top: 0;
 }
-@keyframes blur-out-expand-fwd {
-  0% {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    -webkit-filter: blur(0.01);
-    filter: blur(0.01);
-  }
-  100% {
-    letter-spacing: 1em;
-    -webkit-transform: translateZ(300px);
-    transform: translateZ(300px);
-    -webkit-filter: blur(12px) opacity(0%);
-    filter: blur(12px) opacity(0%);
-  }
+
+.animated-title > div.text-top div {
+  animation: showTopText 1.5s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  bottom: 0;
+  transform: translate(0, 100%);
+}
+
+.animated-title > div.text-top div span:first-child {
+  color: #a5a2a2;
+}
+
+.animated-title > div.text-top div span:last-child {
+  color: #767676;
+}
+
+.animated-title > div.text-bottom {
+  bottom: 0;
+}
+
+.animated-title > div.text-bottom div {
+  animation: showBottomText 0.5s;
+  animation-delay: 2.5s;
+  animation-fill-mode: forwards;
+  top: 0;
+  transform: translate(0, -100%);
 }
 
 /*# sourceMappingURL=style.css.map */

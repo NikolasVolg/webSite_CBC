@@ -1,7 +1,9 @@
 @import "./Bases/bases";
+@import "./Utils/variables";
+@import "./Utils/mixins";
 @import "./Layouts/header";
-@import "./Layouts/accueil";
+@import "./Layouts/homepage";
 @import "./Components/logo";
 @import "./Components/menuBurger";
 @import "./Components/sidebarMenu";
-@import "./Components/h1";
+@import "./Components/homepageTitle";

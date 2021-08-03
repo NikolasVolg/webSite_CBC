@@ -5,23 +5,30 @@ input[type=checkbox] {
 }
 
 .sidebarIconToggle {
-    width: 42px;
-    height: 24px;
+    width: 30px;
+    height: 18px;
     cursor: pointer;
     position: relative;
     transition: all .5s ease-in-out;
     margin-right: 15px;
+    @media screen and (min-width: 768px) {
+        width: 42px;
+        height: 24px;
+    }
 }
 
 .sidebarIconToggle span {
     width: 100%;
-    height: 4px;
+    height: 3px;
     border-radius: 2px;
-    background: #000;
+    background: $sidebarIconToggle;
     display: block;
     position: absolute;
     top: 50%;
     transition: all .5s ease-in-out;
+    @media screen and (min-width: 768px) {
+        height: 4px;
+    }
 }
 
 .sidebarIconToggle span::before,
@@ -29,19 +36,28 @@ input[type=checkbox] {
     content: '';
     position: absolute;
     width: 100%;
-    height: 4px;
+    height: 3px;
     display: block;
-    background: #000;
+    background: $sidebarIconToggle;
     border-radius: 5px;
     transition: all .5s ease-in-out;
+    @media screen and (min-width: 768px) {
+        height: 4px;
+    }
 }
 
 .sidebarIconToggle span::before {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
+    @media screen and (min-width: 768px) {
+        transform: translateY(-10px);
+    }
 }
 
 .sidebarIconToggle span::after {
-    transform: translateY(10px);
+    transform: translateY(8px);
+    @media screen and (min-width: 768px) {
+        transform: translateY(10px);
+    }
 }
 
 
