@@ -1,0 +1,28 @@
+@keyframes showTopText {
+    0% {
+        transform: translate3d(0, 100%, 0);
+    }
+    40%,
+    50% {
+        transform: translate3d(0, 50%, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes showBottomText {
+    0% {
+        transform: translate3d(0, -100%, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes apparition {
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}

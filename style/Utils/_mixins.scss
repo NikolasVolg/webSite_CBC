@@ -1,3 +1,7 @@
 @mixin titleFirstChild {
     color: $titleFirstText;
 }
+
+@mixin fontFamily {
+    font-family: 'Karla';
+}

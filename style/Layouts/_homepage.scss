@@ -5,10 +5,10 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    display: flex;
+    position: relative;
+    z-index: -1;
 }
 
-.Qui p,
 .Realisations p {
     max-width: 500px;
 }

@@ -1,54 +1,52 @@
-#sidebarMenu {
+.sidebarMenu {
     position: fixed;
     right: 0;
     width: 250px;
-    margin-top: 335px;
+    margin-top: 286px;
     transform: translateX(250px);
     transition: all .5s ease-in-out;
     background: $sidebarMenuBGD;
+    @media screen and(min-width: 768px) {
+        margin-top: 335px;
+    }
+    &__Inner {
+        margin: 0;
+        padding: 0;
+        li {
+            @include fontFamily;
+            list-style: none;
+            background-color: $sidebarMenuBGD;
+            text-transform: uppercase;
+            padding: 20px;
+            cursor: pointer;
+            transform: translateX(0);
+            transition: transform .5s ease-in-out;
+            position: relative;
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                background-color: $sidebarMenuLINE;
+                width: 350px;
+                height: 1px;
+                z-index: 5;
+            }
+            &:hover {
+                transform: translateX(-15px);
+            }
+            a {
+                color: $sidebarMenuTEXT;
+                text-transform: uppercase;
+                font-weight: bold;
+                cursor: pointer;
+                text-decoration: none;
+            }
+        }
+    }
 }
 
-.sidebarMenuInner {
-    margin: 0;
-    padding: 0;
-}
-
-.sidebarMenuInner li {
-    list-style: none;
-    background-color: $sidebarMenuBGD;
-    text-transform: uppercase;
-    font-family: 'Karla';
-    padding: 20px;
-    cursor: pointer;
-    transform: translateX(0);
-    transition: transform .5s ease-in-out;
-    position: relative;
-}
-
-.sidebarMenuInner li::before {
-    content: '';
-    display: block;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    background-color: $sidebarMenuLINE;
-    width: 350px;
-    height: 1px;
-    z-index: 5;
-}
-
-.sidebarMenuInner li:hover {
-    transform: translateX(-15px);
-}
-
-.sidebarMenuInner li a {
-    color: $sidebarMenuTEXT;
-    text-transform: uppercase;
-    font-weight: bold;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-input[type="checkbox"]:checked~#sidebarMenu {
+input[type="checkbox"]:checked~.sidebarMenu {
     transform: translateX(0);
 }

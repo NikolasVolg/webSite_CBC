@@ -1,0 +1,10 @@
+h2 {
+    margin: auto;
+}
+
+.Qui p {
+    @include fontFamily;
+    padding: 0 5px 0 5px;
+    max-width: 500px;
+    margin: auto;
+}
