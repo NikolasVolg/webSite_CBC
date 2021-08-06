@@ -1,7 +1,8 @@
-@mixin titleFirstChild {
-    color: $titleFirstText;
-}
-
 @mixin fontFamily {
     font-family: 'Karla';
+}
+
+@mixin centerFlex {
+    display: flex;
+    justify-content: center;
 }

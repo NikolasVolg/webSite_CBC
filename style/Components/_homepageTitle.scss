@@ -25,18 +25,14 @@
         // border-bottom: 1vmin solid $titleLINE;
         top: 0;
         div {
-            animation: showTopText 1.5s;
-            animation-delay: 1s;
+            animation: showTopText 1s;
+            animation-delay: 0.5s;
             animation-fill-mode: forwards;
             bottom: 0;
             transform: translate(0, 100%);
         }
         span:first-child {
-            @include titleFirstChild;
-            transform: color 0.5s;
-            &:hover {
-                color: $FirstTextHover;
-            }
+            color: $titleFirstText;
         }
         span:last-child {
             color: $titleSecondText;
@@ -46,7 +42,7 @@
         bottom: 0;
         div {
             animation: showBottomText 0.5s;
-            animation-delay: 2.5s;
+            animation-delay: 1.5s;
             animation-fill-mode: forwards;
             top: 0;
             transform: translate(0, -100%);
@@ -61,6 +57,7 @@
     @include fontFamily;
     position: absolute;
     left: 65%;
-    bottom: 3%;
+    bottom: 4%;
     font-size: 5vmin;
+    font-weight: 600;
 }

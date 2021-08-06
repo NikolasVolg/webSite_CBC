@@ -1,10 +1,10 @@
-h2 {
-    margin: auto;
+.Qui h2 {
+    @include centerFlex;
 }
 
 .Qui p {
     @include fontFamily;
     padding: 0 5px 0 5px;
-    max-width: 500px;
+    max-width: 800px;
     margin: auto;
 }
