@@ -2,12 +2,12 @@
     position: fixed;
     right: 0;
     width: 250px;
-    margin-top: 286px;
+    margin-top: 345px;
     transform: translateX(250px);
     transition: all .5s ease-in-out;
     background: $sidebarMenuBGD;
     @media screen and(min-width: 768px) {
-        margin-top: 335px;
+        margin-top: 395px;
     }
     &__Inner {
         margin: 0;

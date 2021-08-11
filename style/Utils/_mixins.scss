@@ -6,3 +6,14 @@
     display: flex;
     justify-content: center;
 }
+
+@mixin animH1($pourcentage, $width, $keyframe, $delay) {
+    clip-path: polygon(0 0, 100% 0%, $pourcentage 100%, 0% 100%);
+    margin-left: -$width;
+    width: $width;
+    animation: 1.3s $keyframe $delay ease-out forwards;
+}
+
+@mixin keyframeAnimH1($translate) {
+    transform: translateX($translate);
+}

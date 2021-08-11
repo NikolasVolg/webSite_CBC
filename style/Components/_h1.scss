@@ -1,0 +1,30 @@
+.h1 {
+    @include fontFamily;
+    margin: 0;
+    font-size: 5rem;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 40%;
+    >div {
+        background-color: rgba($color: #eee, $alpha: 0.6);
+        padding-left: 15px;
+        height: 105px;
+        &:nth-of-type(1) {
+            @include animH1(87.6%, 630px, showTranslateTextDiv1, 0.1s, );
+            //pourcentage biseau ; margin-left & width ; Name-keyframe ; delay
+        }
+        &:nth-of-type(2) {
+            @include animH1(85.9%, 550px, showTranslateTextDiv2, 0.3s, );
+            //pourcentage biseau ; margin-left ; width ; Name-keyframe ; delay
+        }
+        &:nth-of-type(3) {
+            @include animH1(84%, 470px, showTranslateTextDiv3, 0.5s, );
+            //pourcentage biseau ; margin-left ; width ; Name-keyframe ; delay
+        }
+    }
+}
+
+.h1 div:hover {
+    opacity: 0;
+}

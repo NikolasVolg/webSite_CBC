@@ -1,28 +1,33 @@
-@keyframes showTopText {
-    0% {
-        transform: translate3d(0, 100%, 0);
-    }
-    40%,
-    50% {
-        transform: translate3d(0, 50%, 0);
-    }
-    100% {
-        transform: translate3d(0, 0, 0);
-    }
-}
-
-@keyframes showBottomText {
-    0% {
-        transform: translate3d(0, -100%, 0);
-    }
-    100% {
-        transform: translate3d(0, 0, 0);
-    }
-}
-
 @keyframes apparition {
     100% {
         opacity: 1;
         transform: none;
+    }
+}
+
+@keyframes showTranslateTextDiv1 {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(630px);
+    }
+}
+
+@keyframes showTranslateTextDiv2 {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(550px);
+    }
+}
+
+@keyframes showTranslateTextDiv3 {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(470px);
     }
 }
