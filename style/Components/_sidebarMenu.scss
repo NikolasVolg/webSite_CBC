@@ -13,7 +13,7 @@
         margin: 0;
         padding: 0;
         li {
-            @include fontFamily;
+            @include fontFamily(1rem);
             list-style: none;
             background-color: $sidebarMenuBGD;
             text-transform: uppercase;

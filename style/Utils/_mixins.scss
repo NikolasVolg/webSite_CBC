@@ -1,5 +1,6 @@
-@mixin fontFamily {
+@mixin fontFamily($size) {
     font-family: 'Karla';
+    font-size: $size;
 }
 
 @mixin centerFlex {
@@ -7,13 +8,9 @@
     justify-content: center;
 }
 
-@mixin animH1($pourcentage, $width, $keyframe, $delay) {
+@mixin animH1($pourcentage, $margin, $width, $keyframe, $delay) {
     clip-path: polygon(0 0, 100% 0%, $pourcentage 100%, 0% 100%);
-    margin-left: -$width;
+    margin-left: $margin;
     width: $width;
     animation: 1.3s $keyframe $delay ease-out forwards;
-}
-
-@mixin keyframeAnimH1($translate) {
-    transform: translateX($translate);
 }

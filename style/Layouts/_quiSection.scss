@@ -3,7 +3,7 @@
 }
 
 .Qui p {
-    @include fontFamily;
+    @include fontFamily(1rem);
     padding: 0 5px 0 5px;
     max-width: 800px;
     margin: auto;

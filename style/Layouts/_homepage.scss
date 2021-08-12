@@ -9,6 +9,11 @@
     z-index: -1;
 }
 
-.Realisations p {
-    max-width: 500px;
+.slogan {
+    @include fontFamily(3rem);
+    position: absolute;
+    right: 5%;
+    bottom: 3%;
+    opacity: 0;
+    animation: apparition 0.6s 1.7s ease-out forwards;
 }
