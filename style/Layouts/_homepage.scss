@@ -5,15 +5,43 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    position: relative;
-    z-index: -1;
 }
 
-.slogan {
-    @include fontFamily(3rem);
-    position: absolute;
-    right: 5%;
-    bottom: 3%;
-    opacity: 0;
-    animation: apparition 0.6s 1.7s ease-out forwards;
+
+/* ALERT HOVER */
+
+.infos {
+    display: none;
+    @media screen and(min-width: 1025px) {
+        opacity: 0;
+        animation: apparition 0.6s 1.7s ease-out forwards;
+        display: block;
+        width: 500px;
+        height: 250px;
+        background-color: $primaryColor;
+        transform: translateX(0);
+        transition: transform .8s ease-in-out;
+        z-index: 400;
+        position: fixed;
+        bottom: 5%;
+        right: 0;
+        margin-right: -450px;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 5% 100%, 0 91%);
+        &:hover {
+            transform: translateX(-450px);
+        }
+        &__arrow {
+            color: azure;
+            position: absolute;
+            bottom: 2.5%;
+            left: 3%;
+            font-size: 1.6rem;
+        }
+        &__text {
+            @include fontFamily(1.1rem);
+            margin-left: 55px;
+            color: azure;
+            text-transform: uppercase;
+        }
+    }
 }

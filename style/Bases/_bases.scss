@@ -16,3 +16,8 @@ html {
     font-family: 'Karla';
     src: url('../../fonts/Karla/Karla-VariableFont_wght.ttf');
 }
+
+header {
+    z-index: 500;
+    position: absolute;
+}

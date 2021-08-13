@@ -10,5 +10,10 @@ nav {
     animation: apparition 0.6s 1.7s ease-out forwards;
     @media screen and(min-width: 768px) {
         height: 100px;
+        /* PLOUF */
+    }
+    @media screen and (orientation: landscape) and (min-width: 740px) and (max-width: 1023px) {
+        height: 65px;
+        /* TEST MERDE */
     }
 }
