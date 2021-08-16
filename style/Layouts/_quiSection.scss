@@ -1,8 +1,5 @@
 .Qui h2 {
     @include centerFlex;
-    &:hover {
-        background-color: aqua
-    }
 }
 
 .Qui p {

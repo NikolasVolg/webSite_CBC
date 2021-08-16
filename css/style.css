@@ -3,6 +3,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-size: 16px;
+  font-family: "Karla";
 }
 
 html {
@@ -20,6 +21,7 @@ header {
 
 /* Color Menu sidebar Toggle */
 /* Homepage Title */
+/* FOOTER */
 @keyframes apparition {
   100% {
     opacity: 1;
@@ -133,7 +135,7 @@ nav {
     transform: translateX(-450px);
   }
   .infos__arrow {
-    color: azure;
+    color: #eee;
     position: absolute;
     bottom: 2.5%;
     left: 3%;
@@ -143,8 +145,11 @@ nav {
     font-family: "Karla";
     font-size: 1.1rem;
     margin-left: 55px;
-    color: azure;
+    color: #eee;
     text-transform: uppercase;
+  }
+  .infos p:first-child {
+    font-weight: 700;
   }
 }
 
@@ -448,12 +453,39 @@ h1 span:nth-of-type(3) {
   }
 }
 
-.Qui h2 {
+.Competences h2 {
   display: flex;
   justify-content: center;
 }
-.Qui h2:hover {
-  background-color: aqua;
+.Competences__container {
+  margin: auto;
+  max-width: 1300px;
+  padding: 5px;
+}
+.Competences__cards {
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid #b00b01;
+  margin-bottom: 25px;
+}
+.Competences__cards--text {
+  flex-direction: column;
+  padding-left: 5px;
+}
+.Competences__cards--text h3 {
+  margin: 0;
+}
+.Competences__cards img {
+  width: 300px;
+  height: 200px;
+  padding-right: 5px;
+  margin: auto;
+  object-fit: cover;
+}
+
+.Qui h2 {
+  display: flex;
+  justify-content: center;
 }
 
 .Qui p {
@@ -480,8 +512,19 @@ h1 span:nth-of-type(3) {
 }
 
 footer {
-  min-height: 200px;
-  background-color: chocolate;
+  min-height: 300px;
+  background-color: #636262;
+  position: relative;
+}
+footer .decalage {
+  display: block;
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  background-color: #8f8f8f;
+  top: -60px;
+  left: 10%;
+  box-shadow: 0px 0px 8px #000;
 }
 
 /*# sourceMappingURL=style.css.map */

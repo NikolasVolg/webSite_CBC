@@ -31,7 +31,7 @@
             transform: translateX(-450px);
         }
         &__arrow {
-            color: azure;
+            color: $text2;
             position: absolute;
             bottom: 2.5%;
             left: 3%;
@@ -40,8 +40,11 @@
         &__text {
             @include fontFamily(1.1rem);
             margin-left: 55px;
-            color: azure;
+            color: $text2;
             text-transform: uppercase;
+        }
+        p:first-child {
+            font-weight: 700;
         }
     }
 }

@@ -1,0 +1,30 @@
+.Competences {
+    h2 {
+        @include centerFlex;
+    }
+    &__container {
+        margin: auto;
+        max-width: 1300px;
+        padding: 5px;
+    }
+    &__cards {
+        display: flex;
+        flex-direction: column;
+        border-left: 2px solid $primaryColor;
+        margin-bottom: 25px;
+        &--text {
+            flex-direction: column;
+            padding-left: 5px;
+            h3 {
+                margin: 0;
+            }
+        }
+        img {
+            width: 300px;
+            height: 200px;
+            padding-right: 5px;
+            margin: auto;
+            object-fit: cover;
+        }
+    }
+}
