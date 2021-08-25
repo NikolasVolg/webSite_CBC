@@ -12,7 +12,7 @@
         transform: translateX(0);
     }
     to {
-        transform: translateX(350px);
+        transform: translateX(370px);
     }
 }
 
@@ -21,7 +21,7 @@
         transform: translateX(0) translateY(0);
     }
     100% {
-        transform: translateX(270px) translateY(10px);
+        transform: translateX(310px) translateY(10px);
     }
 }
 
@@ -35,7 +35,10 @@
 }
 
 
-/*@media 768px*/
+/*------------- @media 768px -----------------*/
+
+
+/*--- Animation H1 ---*/
 
 @keyframes translateH1-1_Up768 {
     from {
