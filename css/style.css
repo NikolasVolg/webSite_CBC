@@ -9,6 +9,11 @@ body {
 html {
   scroll-behavior: smooth;
 }
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
 
 @font-face {
   font-family: "Karla";
@@ -17,6 +22,10 @@ html {
 header {
   z-index: 500;
   position: absolute;
+}
+
+:target {
+  scroll-margin-top: 60px;
 }
 
 /* Color Menu sidebar Toggle */
@@ -78,6 +87,17 @@ header {
     transform: translateX(490px) translateY(20px);
   }
 }
+@keyframes bounce {
+  0% {
+    transform: translateY(0px);
+  }
+  60%, 80% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 nav {
   display: flex;
   align-items: center;
@@ -100,11 +120,16 @@ nav {
   }
 }
 
+.scrolled {
+  background-color: white;
+  box-shadow: 0px 8px 9px 2px rgba(0, 0, 0, 0.66);
+}
+
 @media screen and (min-width: 768px) {
   .scrolled {
     height: 60px;
     background-color: white;
-    box-shadow: 0px 8px 9px 2px rgba(0, 0, 0, 0.66);
+    box-shadow: 0px 2px 15px 1px rgba(0, 0, 0, 0.66);
   }
 }
 .Accueil {
@@ -159,6 +184,27 @@ nav {
   }
 }
 
+.arrowDown {
+  position: absolute;
+  left: 42%;
+  bottom: 5%;
+  font-size: 2.5rem;
+  border: 2px solid black;
+  border-radius: 50%;
+  padding: 0 15px 0 15px;
+  animation: bounce 10s;
+  animation-iteration-count: infinite;
+}
+.arrowDown i {
+  color: #000;
+  margin-bottom: 15px;
+}
+@media screen and (min-width: 768px) {
+  .arrowDown {
+    left: 48.1%;
+  }
+}
+
 header img {
   height: 45px;
   padding-left: 15px;
@@ -178,7 +224,7 @@ header img {
 
 @media screen and (min-width: 768px) {
   .logoScrolled {
-    height: 50px;
+    height: 45px;
   }
 }
 input[type=checkbox] {
@@ -489,16 +535,11 @@ h1 span:nth-of-type(3) {
   margin: 0;
 }
 .Competences__cards img {
-  padding-right: 5px;
   margin: auto;
   width: 300px;
   height: 200px;
   object-fit: cover;
-  transform: scale(1);
-  transition: 0.3s ease-in-out;
-}
-.Competences__cards img:hover {
-  transform: scale(1.1);
+  border: 2px solid black;
 }
 
 .Qui h2 {
@@ -514,16 +555,15 @@ h1 span:nth-of-type(3) {
   margin: auto;
 }
 
+.Realisations {
+  background-image: url("../../images/the-legend-of-zelda-wallpaper-hd-1080p-295152.jpg");
+  background-attachment: fixed;
+  padding-top: 5px;
+}
 .Realisations h2 {
   display: flex;
   justify-content: center;
 }
-
-.Realisations {
-  background-image: url("../../images/the-legend-of-zelda-wallpaper-hd-1080p-295152.jpg");
-  background-attachment: fixed;
-}
-
 .Realisations p {
   max-width: 500px;
   margin: 0;

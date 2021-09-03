@@ -8,9 +8,9 @@ body {
 
 html {
     scroll-behavior: smooth;
-    // @media (prefers-reduced-motion: reduce) {
-    //     scroll-behavior: auto;
-    // }
+    @media (prefers-reduced-motion: reduce) {
+        scroll-behavior: auto;
+    }
 }
 
 @font-face {
@@ -21,4 +21,8 @@ html {
 header {
     z-index: 500;
     position: absolute;
+}
+
+:target {
+    scroll-margin-top: 60px;
 }

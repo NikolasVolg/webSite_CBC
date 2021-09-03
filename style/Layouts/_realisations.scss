@@ -1,13 +1,12 @@
-.Realisations h2 {
-    @include centerFlex;
-}
-
 .Realisations {
     background-image: url("../../images/the-legend-of-zelda-wallpaper-hd-1080p-295152.jpg");
     background-attachment: fixed;
-}
-
-.Realisations p {
-    max-width: 500px;
-    margin: 0;
+    padding-top: 5px;
+    h2 {
+        @include centerFlex;
+    }
+    p {
+        max-width: 500px;
+        margin: 0;
+    }
 }
